@@ -10,7 +10,7 @@ The toolkit is designed for mixed fleets. You can define different payloads for 
 
 All files are stored in the repository root:
 
-- **Invoke-GuestOpsScriptFleet_.ps1**  
+- **Invoke-GuestOpsScriptFleet.ps1**  
   Main fleet runner. Connects to vCenter, detects guest OS, stages the payload inside each guest, executes it with `Invoke-VMScript`, and writes summary and per-VM output files.
 
 - **Generate-GuestOpHTMLReport.ps1**  
@@ -180,7 +180,7 @@ apt list --installed
 ```powershell
 $vcPw = Read-Host "Enter vCenter password" -AsSecureString
 
-.\Invoke-GuestOpsScriptFleet_.ps1 `
+.\Invoke-GuestOpsScriptFleet.ps1 `
   -vCenterServer 'vcenter01.domain.local' `
   -TargetsCsv '.\targets.csv' `
   -WindowsScriptPath '.\Example-PS-targetscript.ps1' `
@@ -200,7 +200,7 @@ $vcPw = Read-Host "Enter vCenter password" -AsSecureString
 ```powershell
 $vcPw = Read-Host "Enter vCenter password" -AsSecureString
 
-.\Invoke-GuestOpsScriptFleet_.ps1 `
+.\Invoke-GuestOpsScriptFleet.ps1 `
   -vCenterServer 'vcenter01.domain.local' `
   -TargetsCsv '.\targets.csv' `
   -WindowsScriptPath '.\Example-PS-targetscript.ps1' `
@@ -216,7 +216,7 @@ $vcPw = Read-Host "Enter vCenter password" -AsSecureString
 ```powershell
 $vcPw = Read-Host "Enter vCenter password" -AsSecureString
 
-.\Invoke-GuestOpsScriptFleet_.ps1 `
+.\Invoke-GuestOpsScriptFleet.ps1 `
   -vCenterServer 'vcenter01.domain.local' `
   -TargetsCsv '.\targets.csv' `
   -ScriptPath '.\Example-PS-targetscript.ps1' `
@@ -229,7 +229,7 @@ $vcPw = Read-Host "Enter vCenter password" -AsSecureString
 ```powershell
 $vcPw = Read-Host "Enter vCenter password" -AsSecureString
 
-.\Invoke-GuestOpsScriptFleet_.ps1 `
+.\Invoke-GuestOpsScriptFleet.ps1 `
   -vCenterServer 'vcenter01.domain.local' `
   -TargetsCsv '.\targets.csv' `
   -LinuxScriptPath '.\collect_info.py' `
@@ -308,7 +308,7 @@ An example output file is included in this repository:
 - `Custom` mode assumes the required interpreter already exists in the guest.
 - VMware Tools must be running and healthy in the guest for execution to work.
 - Guest Operations permissions are required in vCenter.
-- The current runner file is named **`Invoke-GuestOpsScriptFleet_.ps1`** in this repository.  
+- The current runner file is named **`Invoke-GuestOpsScriptFleet.ps1`** in this repository.  
   If you prefer, you can rename it later to a cleaner production filename before publishing.
 
 ## Example repository layout
@@ -316,7 +316,7 @@ An example output file is included in this repository:
 ```text
 vmware-guestops-script-runner/
 ├── GuestOPS.png
-├── Invoke-GuestOpsScriptFleet_.ps1
+├── Invoke-GuestOpsScriptFleet.ps1
 ├── Generate-GuestOpHTMLReport.ps1
 ├── Save-GuestOpsAltCredential.ps1
 ├── targets.csv
