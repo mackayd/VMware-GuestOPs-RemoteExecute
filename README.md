@@ -1,4 +1,4 @@
-# vmware-guestops-script-runner
+# VMware-GuestOPs-RemoteExecute
 
 ![VMware GuestOps Script Runner](GuestOPS.png)
 
@@ -278,7 +278,7 @@ Optional output path and custom title:
 ```
 
 ## HTML report highlights
-
+![VMware GuestOps Script Runner](GuestOPS-Report.gif)
 The generated report provides:
 
 - hero summary with VM status distribution
@@ -335,10 +335,7 @@ vmware-guestops-script-runner/
 
 ## License
 
-Add your preferred license before publishing, for example:
-- MIT
-- Apache-2.0
-- BSD-3-Clause
+Released under the MIT License. See [`LICENSE`](LICENSE).
 
 ## Author notes
 
