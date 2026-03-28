@@ -1,0 +1,7 @@
+VMName,GuestUser,GuestPassword,TargetOs,UseSudo,AltCredFile
+TargetWinVM01,,,auto,,
+TargetLinVM02,,,auto,,
+TargetWinVM03,,,auto,,domainCreds.xml
+Ubuntu-01,,,auto,,Ubcreds.xml
+WinXP-01,user1,P@ssw0rd123,auto,,
+Proton01,root,B@dPa$$,auto,,
